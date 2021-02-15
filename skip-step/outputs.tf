@@ -1,27 +1,19 @@
-# output "client_key" {
-#   value = "${azurerm_kubernetes_cluster.k8s.kube_config.0.client_key}"
-# }
+output "aks_id" {
+  value = azurerm_kubernetes_cluster.aks.id
+}
 
-# output "client_certificate" {
-#   value = "${azurerm_kubernetes_cluster.k8s.kube_config.0.client_certificate}"
-# }
+output "aks_fqdn" {
+  value = azurerm_kubernetes_cluster.aks.fqdn
+}
 
-# output "cluster_ca_certificate" {
-#   value = "${azurerm_kubernetes_cluster.k8s.kube_config.0.cluster_ca_certificate}"
-# }
+output "aks_node_rg" {
+  value = azurerm_kubernetes_cluster.aks.node_resource_group
+}
 
-# output "cluster_username" {
-#   value = "${azurerm_kubernetes_cluster.k8s.kube_config.0.username}"
-# }
+output "acr_id" {
+  value = azurerm_container_registry.acr.id
+}
 
-# output "cluster_password" {
-#   value = "${azurerm_kubernetes_cluster.k8s.kube_config.0.password}"
-# }
-
-# output "kube_config" {
-#   value = "${azurerm_kubernetes_cluster.k8s.kube_config_raw}"
-# }
-
-# output "host" {
-#   value = "${azurerm_kubernetes_cluster.k8s.kube_config.0.host}"
-# }
+output "acr_login_server" {
+  value = azurerm_container_registry.acr.login_server
+}
