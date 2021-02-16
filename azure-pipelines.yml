@@ -5,7 +5,6 @@ variables:
   vmImageName: 'ubuntu-latest'
   location: 'Korea Central'
   #terraformVersion: 0.14.3
-  subscription: 'Microsoft Azure Sponsorship - MVP'
   resourceGroup: 'ud-terraform-demo-rg'
   storageAccount: 'udzerotfstate'
   storageAccountSku: 'Standard_LRS'
@@ -39,7 +38,7 @@ steps:
     command: 'plan'
     workingDirectory: '$(System.DefaultWorkingDirectory)/skip-step'
     commandOptions: '-out=tfplan'
-    environmentServiceNameAzureRM: 'Microsoft Azure Sponsorship - MVP(1199b626-a317-4559-9289-caba7859ee88)'
+    environmentServiceNameAzureRM: 'SvcConn4Handson'
 
 - task: PowerShell@2
   displayName: detect any terraform change
